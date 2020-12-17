@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan({"br.com.iti.validationpassword.service", "br.com.iti.validationpassword.controller"})
+@ComponentScan({"br.com.iti.validationpassword.*"})
 public class ValidationPasswordApplication {
 
 	public static void main(String[] args) {

@@ -38,7 +38,7 @@ class ValidationPasswordControllerTest {
 		BDDMockito.given(validationPasswordService.validatePassword(password)).willReturn(true);
 		
 		this.mockMvc
-			.perform(MockMvcRequestBuilders.post("/validation/validate")
+			.perform(MockMvcRequestBuilders.post("/password/validates")
 			.contentType("application/json")
 			.content(requestJson))
 			.andExpect(MockMvcResultMatchers.status().isOk())
@@ -58,7 +58,7 @@ class ValidationPasswordControllerTest {
 			.willThrow(new PasswordInvalidException("A senha deve conter ao menos um caracter especial."));
 		
 		this.mockMvc
-			.perform(MockMvcRequestBuilders.post("/validation/validate")
+			.perform(MockMvcRequestBuilders.post("/password/validates")
 			.contentType("application/json")
 			.content(requestJson))
 			.andExpect(MockMvcResultMatchers.status().isOk())

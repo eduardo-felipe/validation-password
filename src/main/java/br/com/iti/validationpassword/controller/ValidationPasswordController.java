@@ -10,7 +10,7 @@ import br.com.iti.validationpassword.dto.ValidationPasswordResponse;
 import br.com.iti.validationpassword.service.ValidationPasswordService;
 
 @RestController
-@RequestMapping("/validation")
+@RequestMapping("/password")
 public class ValidationPasswordController {
 
 	private ValidationPasswordService validationPasswordService;
@@ -19,7 +19,7 @@ public class ValidationPasswordController {
 		this.validationPasswordService = validationPasswordService;
 	}
 	
-	@PostMapping("/validate")
+	@PostMapping("/validates")
 	public ValidationPasswordResponse validatePassword(@RequestBody ValidationPasswordRequest request) {	
 		try {	 
 			return ValidationPasswordResponse.builder()

@@ -29,7 +29,7 @@ class ValidationPasswordIntegrationTest {
 		String requestJson = mapper.writeValueAsString(validationPasswordRequest);
 		
 		this.mockMvc
-			.perform(MockMvcRequestBuilders.post("/validation/validate")
+			.perform(MockMvcRequestBuilders.post("/password/validates")
 			.contentType(MediaType.APPLICATION_JSON_VALUE)
 			.content(requestJson))
 			.andExpect(MockMvcResultMatchers.status().isOk())
@@ -46,7 +46,7 @@ class ValidationPasswordIntegrationTest {
 		String requestJson = mapper.writeValueAsString(validationPasswordRequest);
 		
 		this.mockMvc
-			.perform(MockMvcRequestBuilders.post("/validation/validate")
+			.perform(MockMvcRequestBuilders.post("/password/validates")
 			.contentType(MediaType.APPLICATION_JSON_VALUE)			
 			.content(requestJson))
 			.andExpect(MockMvcResultMatchers.status().isOk())
@@ -63,7 +63,7 @@ class ValidationPasswordIntegrationTest {
 			String requestJson = mapper.writeValueAsString(validationPasswordRequest);
 			
 			this.mockMvc
-				.perform(MockMvcRequestBuilders.post("/validation/validate")
+				.perform(MockMvcRequestBuilders.post("/password/validates")
 				.contentType(MediaType.APPLICATION_JSON_VALUE)
 				.content(requestJson))
 				.andExpect(MockMvcResultMatchers.status().isOk())
@@ -80,7 +80,7 @@ class ValidationPasswordIntegrationTest {
 			String requestJson = mapper.writeValueAsString(validationPasswordRequest);
 			
 			this.mockMvc
-				.perform(MockMvcRequestBuilders.post("/validation/validate")
+				.perform(MockMvcRequestBuilders.post("/password/validates")
 				.contentType(MediaType.APPLICATION_JSON_VALUE)
 				.content(requestJson))
 				.andExpect(MockMvcResultMatchers.status().isOk())
@@ -97,7 +97,7 @@ class ValidationPasswordIntegrationTest {
 			String requestJson = mapper.writeValueAsString(validationPasswordRequest);
 			
 			this.mockMvc
-				.perform(MockMvcRequestBuilders.post("/validation/validate")
+				.perform(MockMvcRequestBuilders.post("/password/validates")
 				.contentType(MediaType.APPLICATION_JSON_VALUE)
 				.content(requestJson))
 				.andExpect(MockMvcResultMatchers.status().isOk())
@@ -114,7 +114,7 @@ class ValidationPasswordIntegrationTest {
 			String requestJson = mapper.writeValueAsString(validationPasswordRequest);
 			
 			this.mockMvc
-				.perform(MockMvcRequestBuilders.post("/validation/validate")
+				.perform(MockMvcRequestBuilders.post("/password/validates")
 				.contentType(MediaType.APPLICATION_JSON_VALUE)
 				.content(requestJson))
 				.andExpect(MockMvcResultMatchers.status().isOk())
@@ -131,7 +131,7 @@ class ValidationPasswordIntegrationTest {
 			String requestJson = mapper.writeValueAsString(validationPasswordRequest);
 			
 			this.mockMvc
-				.perform(MockMvcRequestBuilders.post("/validation/validate")
+				.perform(MockMvcRequestBuilders.post("/password/validates")
 				.contentType(MediaType.APPLICATION_JSON_VALUE)
 				.content(requestJson))
 				.andExpect(MockMvcResultMatchers.status().isOk())
@@ -148,7 +148,7 @@ class ValidationPasswordIntegrationTest {
 			String requestJson = mapper.writeValueAsString(validationPasswordRequest);
 			
 			this.mockMvc
-				.perform(MockMvcRequestBuilders.post("/validation/validate")
+				.perform(MockMvcRequestBuilders.post("/password/validates")
 				.contentType(MediaType.APPLICATION_JSON_VALUE)
 				.content(requestJson))
 				.andExpect(MockMvcResultMatchers.status().isOk())
@@ -165,7 +165,7 @@ class ValidationPasswordIntegrationTest {
 			String requestJson = mapper.writeValueAsString(validationPasswordRequest);
 			
 			this.mockMvc
-				.perform(MockMvcRequestBuilders.post("/validation/validate")
+				.perform(MockMvcRequestBuilders.post("/password/validates")
 				.contentType(MediaType.APPLICATION_JSON_VALUE)
 				.content(requestJson))
 				.andExpect(MockMvcResultMatchers.status().isOk())

@@ -29,8 +29,15 @@ IsValid("AbTp9!fok") // true
 
 2. É necessário ter instalado o Maven (de preferência na versão mais recente). [Maven](https://maven.apache.org/download.cgi)
 
+3. Para execução via Docker, é necessário ter instalado o Docker (de preferência na versão mais recente). [Docker](https://www.docker.com/)
+
 ## Execução do Projeto (Manual)
 
+Clonar o projeto:
+
+```bash
+git clone https://github.com/eduardo-felipe/validation-password.git
+```
 Entrar no diretório do projeto:
 
 ```bash
@@ -47,21 +54,29 @@ Executar o JAR do Projeto:
 java -jar target\validation-password-0.0.1-SNAPSHOT.jar
 ```
 ## Execução do Projeto (Docker)
-
-## Usage
-
-```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+```bash
+docker run -p 8080:8080 eduardofal1987/validation-password:v1.0
 ```
+## Detalhes da Solução
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+1. Escolhi utilizar a linguagem de programação Java, usando o Spring como Framework para facilitar a criação da API Web usando o padrão MVC. 
 
-Please make sure to update tests as appropriate.
+2. Também foi utilizado o projeto Lombok para facilitar e diminuir a quantidade e complexidade do código (exemplo gerar Getters e Setters e construtores).
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+3. Foi utilizado o JUNIT para testes unitários, pois é um dos frameworks de testes mais utilizados para a linguagem.
+
+4. Foi utilizado a especificação OpenApi/Swagger para documentação da API.
+
+5. Em relação ao Design da API, considerei o uso do verbo POST, pois ele é o mais recomendado quando tratamos de dados sensíveis como uma senha. Ele acaba sendo um pouco mais seguro, pois o dado não fica visível na URL e nem fica armazenado em histórico de navegadores, pois o mesmo é trafegado através de do body da requisição.
+
+6. A solução foi baseada em um serviço de Validação de Senha, porém todos as validações foram realizadas em métodos separados para segmentar as responsabilidades, fazendo com que cada método tivesse somente 1 objetivo.
+
+7. Foram criadas exceções especificas para cada validação, afim de melhorar a visibilidade entre o que é uma regra de negócio e uma exceção da aplicação.
+
+## Premissas
+
+1. Foi incluído uma mensagem de retorno no response para informar qual o motivo da senha não ser valida.
+
+2. Foi incluído uma package de testes integrados no próprio repositório.
+
+3. Foi criado uma imagem docker para facilitar a preparação do ambiente do projeto.
